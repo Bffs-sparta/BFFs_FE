@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head-area {
+    width: 1200;
+    height: 400px;
+    position: relative;
+    background: rgb(116, 35, 61);
+}
+
+.head-area p {
+    margin-top: 300px;
+    text-align: center;
+    color: white;
+    font-size: 25px;    
+}
+
+.head-title {
+    word-spacing:10px;
+    letter-spacing:6px;
+}
+
+.main-area {
+    width: 1200;
+    height: auto;
+}
+
+.main-container {
+    margin: 20px 0px 20px 0px;
+    padding: 30px;
+    position: relative
+}
+
+/***** 혼자 - AI *****/
+
+.main-title {
+    width:auto;
+    vertical-align:middle;
+}
+
+.main-title h3 {
+    padding-left: 30px;    
+    float: left;
+    color: #555555;
+    font-size: 22px;
+}
+
+.main-title a {
+    padding-left: 110px;
+    color: #9E2067;
+    font-size: 25px;    
+}
+
+.main-ai-box {
+    align-items: center;
+    float: left;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.main-ai-image-box img {
+    clear: both;
+    padding-top: 10px;
+    width: 40px;
+    height: auto;
+}
+
+/***** 혼자 놀기 *****/
+.main-box {
+    background-color: #f9e5eb;
+    margin: 30px 50px 40px 0px;
+}
+
+.card-container {
+    margin-top:70px;
+}
+
+.alone-card-box {
+    width: 260px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    cursor: pointer;
+}
+   
+.alone-card-box:hover {
+    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
+.card-image {
+    margin: 0 auto;
+    width: 260px;
+    height: 190px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    position: absolute;
+    width: 270px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*****Text*****/
+.card-text{
+    display: block;
+}
+
+.card-text p {
+    line-height: 140%;
+    white-space: nowrap;   
+}
+  
+.alone-text-title {
+    margin-top: 23px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #909090;
+}
+
+.card-subtext{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.alone-text-content {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.alone-card-subtext img {
+    width: 20px;
+    height: 15px;
+}
+
+.alone-text-view-box{
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.alone-text-view-box img {
+    text-align: center;
+    width: 20px;
+    height: 15px;
+}
+
+.alone-text-view-content {
+    text-align: center;
+    margin-left: 70px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/***** 같이 놀기 *****/
+.with-card-box {
+    width: 480px;
+    height: 270px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    cursor: pointer;
+}
+
+.with-card-text {
+    display: flex;
+}
+
+.card-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-text-image img {
+    width: 100%;
+}
+
+.with-card-box:hover {
+    border: #9E2067, 0.2em solid;
+    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
+.with-card-image {
+    margin-left: 20px;
+    width: 260px;
+    height: 190px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.with-text-title {
+    margin-top: 10px;
+    padding-left: 30px;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #707070;
+}
+
+.with-text-region {
+    margin-top: 10px;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    font-weight: 450;
+    font-size: 1.0rem;
+    color: #909090;
+}
+
+.with-card-subtext{
+    display: flex;
+    margin-top: 14px;
+    justify-content: center;
+    text-align: center;
+}
+
+.with-card-text-box {
+    padding-right: 20px;
+}
+
+.with-card-category {
+    margin-left: 55px;
+    display: flex;
+}
+
+.with-card-category-box {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 450;
+    font-size: 1.0rem;
+    color: #909090;
+    cursor: pointer;
+}
+
+.with-text-content-box {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 120px; 
+}
+
+.with-text-view-box{
+    display: flex;
+    margin-top: 2px;
+}
+
+
+.with-text-content {
+    text-align: center;
+    margin-left: 10px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.with-card-subtext img {
+    text-align: center;
+    width: 20px;
+    height: 15px;
+}
+
+.with-text-view-content {
+    text-align: center;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
