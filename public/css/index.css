@@ -148,7 +148,7 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 .main-container {
     margin: 20px 0px 20px 0px;
     padding: 30px;
-    position: relative
+    position: relative;
 }
 
 /***** 혼자 - AI *****/
@@ -165,8 +165,20 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     font-size: 22px;
 }
 
+.main-title h3::after {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 6px;
+    width: 2px;
+    height: 22px;
+    background-color: #9E2067;
+}
+
 .main-title a {
     padding-left: 110px;
+    font-style: italic;
+    font-weight: bold;
     color: #9E2067;
     font-size: 25px;    
 }
