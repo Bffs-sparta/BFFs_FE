@@ -20,7 +20,9 @@ body {
 .main-container {
     padding: 30px;
     position: relative;
+    display: flex;
     vertical-align: middle;
+    justify-content: center;
 }
 
 /***** Title area *****/
@@ -41,19 +43,24 @@ body {
 
 /***** Content area *****/
 
+.main-wrapper {
+    display: flex;
+    vertical-align: middle;
+}
+
 .sub-title {
     width:100%;
-    justify-content: center;
-    display: flex;
+    float: left;
 }
 
 .sub-title span {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+    margin-right: 190px;
 }
 
 .sub-title h3 {
-    display: flex;
     margin-right: 30px;
     color: #909090;
 }
@@ -95,6 +102,53 @@ body {
     margin-right: 45px;
     color: #909090;
 }
+
+
+/***** imageupload css area *****/
+
+.custum-file-upload {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
 
 
 /***** textarea css area *****/
