@@ -5,9 +5,8 @@ body {
 
 .head-area {
     width: 100%;
-    height: 150px;
+    height: 50px;
     position: relative;
-    background: rgb(116, 35, 61);
 }
 
 .head-area p {
@@ -140,6 +139,113 @@ body {
     fill: #ffc549;
 }
 
+
+/***** 커뮤니티 카테고리 area *****/
+
+.search-category-area {
+    display: grid;
+    margin: 5px 5px 5px 5px;
+    padding-right: 3%;
+    justify-content: space-between;
+
+    grid-template-columns: 70% 30%;
+}
+
+.head-category-wrapper {
+    display: flex;
+    justify-content: left;
+    height: 72px;
+    width: auto;
+    padding: 10px, 10px, 10px, 10px;
+}
+
+.head-category {
+    display: block;
+    min-width: 100px;
+    overflow: hidden;
+}
+
+.category-item-box {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.category-item-box::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.category-item {
+    flex: 0 0 auto;
+    margin-right: 8px;
+    padding: 10px 12px;
+    outline: none;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 650;
+    white-space: nowrap;
+    background-color: #909090;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #707070;
+    transition: all ease 0.5s;
+}
+
+.category-item a {
+    text-decoration-line: none;
+    color: white;
+}
+
+
+/***** search area *****/
+
+.search-box {
+    margin-top: 14px;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 2;
+}
+
+.container-input {
+    position: relative;
+}
+  
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #707070;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+  
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+  
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+
+
 /***** 랜덤 커뮤니티 area *****/
 
 .random-card-wrapper {
@@ -208,9 +314,6 @@ body {
     grid-row: 1 / 2;
 }
 
-
-
-
 .random-text-box {
     margin-top: 2px;
     grid-column: 4 / 6;
@@ -275,6 +378,7 @@ body {
 .new-card-wrapper {
     display: flex;
     justify-content: flex-start;
+    padding: 20px 10px;
     overflow: scroll;
 }
 
@@ -355,14 +459,16 @@ body {
     /* 그리드로 카드 자리 지정 */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, auto));
-    grid-template-rows: 300px 300px 300px;  
-    row-gap: 30px;
+    grid-template-rows:repeat(auto-fill, minmax(300px, auto));  
+    row-gap: 10px;
 	column-gap: 20px;
 }
 
 .with-card-box {
     width: 480px;
     height: 270px;
+    margin-bottom: 20px;
+
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
     box-shadow: 0.3em 0.3em 0.7em #00000015;
@@ -484,52 +590,3 @@ body {
     font-weight: 400;
     font-size: 0.9rem;
 }
-
-/***** search area *****/
-
-.comuadmin-name {
-    float: left;
-    margin-right: 20px;
-    padding-top: 10px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    color : #909090
-}
-
-.search-area {
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.search-box {
-    margin-top: 14px;
-    align-items: center;
-}
-
-.container-input {
-    position: relative;
-}
-  
-.input {
-    width: 150px;
-    padding: 10px 0px 10px 40px;
-    border-radius: 9999px;
-    border: solid 1px #707070;
-    transition: all .2s ease-in-out;
-    outline: none;
-    opacity: 0.8;
-}
-  
-.container-input svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translate(0, -50%);
-}
-  
-.input:focus {
-    opacity: 1;
-    width: 250px;
-}
-
