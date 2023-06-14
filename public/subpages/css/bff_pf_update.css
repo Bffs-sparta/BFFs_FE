@@ -98,6 +98,11 @@ header > .profile > h3 {
 }
 
 
+.user_profile > .quit-button {
+    float: right;
+
+}
+
 
 
 
@@ -108,8 +113,8 @@ header > .profile > h3 {
 
 
 .card {
-  width: 190px;
-  height: 274px;
+  width: 472px;
+  height: 424px;
   background: white;
   padding: .4em;
   border-radius: 6px;
