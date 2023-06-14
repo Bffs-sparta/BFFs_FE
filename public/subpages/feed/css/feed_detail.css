@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head-area {
+    margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    background: rgb(116, 35, 61);
+}
+
+.head-area p {
+    margin: 18px 50px;
+    text-align: right;
+    color: white;
+    font-size: 26px;    
+}
+
+.head-title {
+    word-spacing:5px;
+    letter-spacing:5px;
+}
+
+.main-area {
+    width: 1200;
+    height: auto;
+}
+
+.main-container {
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+/* 게시판 ~ search area */
+
+.category-area {
+    width: 1200;
+    height: auto;
+}
+
+.catogory-container {
+    margin: 10px 40px;
+    height: 60px;
+    background-color: #ffc549;
+}
+
+/***** 버튼 css *****/
+
+.button-box {
+    display: flex;
+    margin: 5px 55px; 
+    float: right;
+}
+
+/* 북마크 button css */
+
+.bookmark {
+    margin-right: 15px;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+  
+.container svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 48px;
+    width: 48px;
+    transition: all 0.3s;
+    fill: #666;
+}
+  
+.container svg:hover {
+    transform: scale(1.2);
+}
+  
+.container input:checked ~ svg {
+    fill: #ffc549;
+}
+
+/* 새 글 쓰기 button */
+
+.Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: #9e2070;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: .3s;
+  }
+  
+  .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    color: transparent;
+  }
+  
+  .Btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+  }
+  
+  .Btn:active {
+    transform: translate(3px , 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px #9e2070;
+  }
+
+
+/* 뒤로 button */
+
+.back-button {
+    margin: 20px 40px;
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #454545;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #909090;
+}
+
+.back-button span {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.back-button svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+    fill: white;
+}
+
+.back-button:hover svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+    fill: white;
+}
+   
+.back-button:hover {
+    box-shadow: 9px 9px 22px #d1d1d1, -9px -9px 22px #ffffff;
+    transform: translateY(-2px);
+}
