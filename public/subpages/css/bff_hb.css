@@ -1,0 +1,233 @@
+@import url("/css/base/_fonts.css");
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+p {
+    color: #000
+}
+
+img {
+    display: block;
+}
+
+
+
+
+
+
+
+header > #menu {
+    width: 278px;
+    height: 648px;
+    background-color: pink;
+}
+
+header > #menu > .sub-menu {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+header > #menu > .sub-menu > .hamburger > .material-icons {
+    color: #D7C0CD;
+    margin-left: 12px;
+    margin-right: 4px;
+}
+
+header > #menu > .sub-menu > h2 {
+    color: #D7C0CD;
+}
+
+header > #menu > .ct_1 {
+    margin-bottom: 48px;
+}
+
+
+header > #menu > .ct_1 > .alone_play {
+    list-style-type: none;
+
+}
+
+header > #menu > .ct_1 > .alone_play  {
+    padding-left: 12px;
+}
+
+header > #menu > .ct_1 > .alone_play > li {
+    margin: 8px 0;
+}
+
+header > #menu > .ct_1 > .alone_play > li > a {
+    margin-left: 24px;
+
+}
+
+header > #menu > .ct_2 > .together_play {
+    padding-left: 12px;
+}
+
+header > #menu > .ct_2 > .together_play > li {
+    margin: 8px 0;
+}
+
+header > #menu > .ct_2 > .together_play > li > a {
+    margin-left: 24px;
+    color: #454545;
+}
+
+
+
+
+header > #menu > .ct_2 > .together_play {
+    list-style-type: none;
+}
+
+header > #menu {
+    position: relative
+}
+
+header > #menu > .suggestions {
+    position: absolute;
+    margin: 0 0 8px 12px;
+    bottom: 0;
+}
+
+header > #menu > .suggestions > p {
+    color: #D7C0CD;
+    font-size: 12px;
+}
+
+
+
+
+
+header > #menu > .ct_1 > .alone_play > li > h4 > a {
+    font-style: italic;
+    font-weight: bold;
+    color: #9E2067;
+}
+
+
+
+
+
+
+
+header > .inner{
+        position: relative;
+        width: 1100px;
+        height: 120px;
+        margin: 0 auto;
+        background-color: #fff;
+        opacity: 0.6;
+
+
+}
+
+header > .inner > h1 > .logo {
+    height: 111px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+
+}
+
+
+
+header > .inner > .sub-menu {
+    position: absolute;
+    top: 10;
+    right: 0;
+    display: flex;
+}
+
+header > .inner > .sub-menu > nav > h2 {
+    visibility: hidden;
+}
+
+header > .inner > .sub-menu > nav > .menu {
+    list-style-type: none;
+    display: flex;
+    padding-right: 48px;
+    align-items: center;
+    height: 70px;
+    
+    
+
+}
+
+header > .inner > .sub-menu > nav > .menu > li{
+ position: relative;
+}
+
+header > .inner > .sub-menu > nav > .menu > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+header > .inner > .sub-menu > nav > .menu > li:first-child:before {
+    display: none;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a{
+    padding: 11px 12px;
+    color: #454545;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a:hover {
+    color: #9E2067;
+}
+
+header > .inner > .sub-menu > .hamburger {
+    position: relative;
+}
+
+header > .inner > .sub-menu > .hamburger > .material-icons {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    right: 4px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+footer {
+    background-color: #dddddd;
+}
+
+footer > .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+footer > .inner > img {
+    width:42px;
+    height: 42px;
+}
