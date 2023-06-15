@@ -129,7 +129,7 @@ button:hover {
   background: white;
   padding: .4em;
   border-radius: 6px;
-  margin-left: -488px;
+  margin-left: -248px;
 }
 
 .card-image {
@@ -187,7 +187,7 @@ button:hover {
     top: 0;
     bottom: 0;
     right: 80px;
-    margin-left: 28px;
+    margin-left: 88px;
     display: grid;
     place-items: center;
     grid-template-rows: (1, 48px);
@@ -478,15 +478,14 @@ button:hover {
     overflow: scroll;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 1600px;
+    min-width: 1500px;
 }
 
 
 .new-card-box {
     width: 300px;
     height: 120px;
-
-    margin: 18px 30px 18px 12px;
+    margin: 18px 12px 18px 22px;
 
     padding: 8px;
     background: rgb(255, 255, 255);
