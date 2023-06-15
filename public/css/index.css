@@ -258,6 +258,9 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     margin-left: 20px;
     font-weight: 600;
     font-size: 1.2rem;
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: #909090;
 }
 
@@ -344,8 +347,12 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 .with-text-title {
     margin-top: 10px;
     padding-left: 30px;
-    align-items: center;
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
     display: flex;
+    align-items: center;
     font-weight: 600;
     font-size: 1.3rem;
     color: #707070;

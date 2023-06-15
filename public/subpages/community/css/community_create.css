@@ -164,7 +164,7 @@ header > .inner > .sub-menu > nav > .menu > li {
     height: 200px;
     background-color: #05060f0a;
     border-radius: .5rem;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     border: 2px solid transparent;
     font-size: 1rem;
     transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
@@ -196,8 +196,8 @@ header > .inner > .sub-menu > nav > .menu > li {
 }
 
 .create-button {
-    margin-right: 30px;
     outline: none;
+    margin-right: 20px;
     border: none;
     cursor: pointer;
     padding: 10px 20px 11px;
