@@ -98,10 +98,6 @@ header > .profile > h3 {
 }
 
 
-.user_profile > .quit-button {
-    float: right;
-
-}
 
 
 
@@ -113,11 +109,17 @@ header > .profile > h3 {
 
 
 .card {
-  width: 472px;
-  height: 424px;
+  width: 462px;
+  height: 384px;
   background: white;
   padding: .4em;
   border-radius: 6px;
+  margin-top: 88px;
+}
+
+.card > .change {
+    margin-top: 24px;
+    float: right;
 }
 
 .card-image {
@@ -196,6 +198,14 @@ header > .profile > h3 {
     grid-column: 1 / 3;
 }
 
+.user_profile:nth-child(1) {
+    grid-column: 1 / 4;
+}
+
+.list {
+    margin-right:44px;
+}
+
 .list > dl {
     display: flex;
 }
@@ -208,12 +218,13 @@ header > .profile > h3 {
 }
 
 .guestbook-comment > .submit-box {
+    display: flex;
     height: 43px;
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 248px;
-    margin: auto;
+    right: 448px;
+    margin: 0 auto;
 }
 
 
@@ -342,16 +353,18 @@ header > .profile > h3 {
 
 footer {
     background-color: #dddddd;
+    /* position: fixed; */
+    bottom: 0;
 }
 
-footer > .inner {
+footer > .wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
 }
 
-footer > .inner > img {
+footer > .wrap > img {
     width:42px;
     height: 42px;
 }
