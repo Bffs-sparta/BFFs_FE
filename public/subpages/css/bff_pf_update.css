@@ -212,21 +212,14 @@ header > .profile > h3 {
 
 
 
-.guestbook-comment {
-    position: relative;
-    height: 88px;
-}
+
 
 .guestbook-comment > .submit-box {
     display: flex;
-    height: 43px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 448px;
-    margin: 0 auto;
+
 }
 
+.inner > .guestbook-comment > .create-button {}
 
 
 
@@ -254,10 +247,6 @@ header > .profile > h3 {
 
 
 
-
-
-
-
 .submit-box {
     display: flex;
     justify-content: center;
@@ -266,11 +255,15 @@ header > .profile > h3 {
 }
 
 .create-button {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-right: 30px;
     outline: none;
     border: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     cursor: pointer;
-    padding: 10px 20px 11px;
+    padding: 10px 31px 11px;
     font-size: 14px;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
@@ -329,6 +322,11 @@ header > .profile > h3 {
     transition: background-position 0.5s ease-in-out,
       background-size 0.75s ease-in-out;
   }
+
+
+
+  
+
 
 .quit-button {
     outline: none;
