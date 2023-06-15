@@ -3,23 +3,141 @@ body {
     padding: 0;
 }
 
-.head-area {
-    width: 100%;
-    height: 400px;
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #000
+}
+
+img {
+    display: block;
+}
+
+
+
+
+header > .inner{
+        position: relative;
+        width: 1100px;
+        height: 120px;
+        margin: 0 auto;
+
+
+}
+
+header > .inner > h1 > .logo {
+    height: 111px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+
+}
+
+
+
+header > .inner > .sub-menu {
+    position: absolute;
+    top: 10;
+    right: 0;
+    display: flex;
+}
+
+header > .inner > .sub-menu > nav > h2 {
+    visibility: hidden;
+}
+
+header > .inner > .sub-menu > nav > .menu {
+    list-style-type: none;
+    display: flex;
+    padding-right: 48px;
+    align-items: center;
+    height: 70px;
+    
+    
+
+}
+
+header > .inner > .sub-menu > nav > .menu > li{
+ position: relative;
+}
+
+header > .inner > .sub-menu > nav > .menu > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+header > .inner > .sub-menu > nav > .menu > li:first-child:before {
+    display: none;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a{
+    padding: 11px 12px;
+    color: #454545;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a:hover {
+    color: #9E2067;
+}
+
+header > .inner > .sub-menu > .hamburger {
     position: relative;
-    background: rgb(116, 35, 61);
 }
 
-.head-area p {
-    margin-top: 300px;
+header > .inner > .sub-menu > .hamburger > .material-icons {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+.visual {
+    background-image: url("/public/images/bc2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    height: 648px;
+
+
+}
+
+
+
+.visual > .inner > .text {
+    color: #fff;
     text-align: center;
-    color: white;
-    font-size: 25px;    
-}
-
-.head-title {
-    word-spacing:10px;
-    letter-spacing:6px;
 }
 
 .main-area {
@@ -30,7 +148,7 @@ body {
 .main-container {
     margin: 20px 0px 20px 0px;
     padding: 30px;
-    position: relative
+    position: relative;
 }
 
 /***** 혼자 - AI *****/
@@ -47,8 +165,20 @@ body {
     font-size: 22px;
 }
 
+.main-title h3::after {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 6px;
+    width: 2px;
+    height: 22px;
+    background-color: #9E2067;
+}
+
 .main-title a {
     padding-left: 110px;
+    font-style: italic;
+    font-weight: bold;
     color: #9E2067;
     font-size: 25px;    
 }
