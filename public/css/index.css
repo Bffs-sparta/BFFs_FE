@@ -151,12 +151,25 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     position: relative;
 }
 
-/***** 혼자 - AI *****/
-
 .main-title {
-    width:100%;
+    width: 100%;
     vertical-align:middle;
+    height: 50px;
+    margin-bottom: 40px;
 }
+
+.main-box {
+    margin: 30px 40px 40px 30px;
+}
+
+.card-container {
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+/***** 혼자 - AI *****/
 
 .main-title h3 {
     padding-left: 30px;    
@@ -198,16 +211,6 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 }
 
 /***** 혼자 놀기 *****/
-.main-box {
-    /* background-color: #faf3f5; */
-    margin: 30px 50px 40px 0px;
-}
-
-.card-container {
-    margin-top:70px;
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .alone-card-box {
     margin-right: 40px;
@@ -305,10 +308,21 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 }
 
 /***** 같이 놀기 *****/
+.with-card-container {
+    width: 1200;
+    /* 그리드로 카드 자리 지정 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+    grid-template-rows:repeat(auto-fill, minmax(300px, auto));  
+    row-gap: 10px;
+	column-gap: 20px;
+}
+
 .with-card-box {
-    margin-right: 30px;
     width: 480px;
     height: 270px;
+    margin-bottom: 20px;
+
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
     box-shadow: 0.3em 0.3em 0.7em #00000015;
