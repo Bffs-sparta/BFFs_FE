@@ -305,25 +305,6 @@ button:hover {
 
 
 
- .user-guestbook > .submit-box > .create-button {
-       /* margin-right: 100px; */
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 20px 28px 25px;
-    font-size: 8px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    background-color: #a92278;
-    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
-
-}
 
 .writer > .guestbook-comment {
     position: relative;
@@ -394,7 +375,7 @@ button:hover {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    padding: 10px 20px 11px;
+    padding: 10px 28px 11px;
     font-size: 14px;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
