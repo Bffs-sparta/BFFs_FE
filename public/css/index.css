@@ -307,9 +307,11 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     font-size: 0.9rem;
 }
 
-/***** 같이 놀기 *****/
+/***** 같이 놀기 card area *****/
+
 .with-card-container {
     width: 1200;
+    margin-top: 20px;
     /* 그리드로 카드 자리 지정 */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, auto));
@@ -331,6 +333,11 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     cursor: pointer;
 }
 
+.with-card-box:hover {
+    border: #9E2067, 0.2em solid;
+    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
 .with-card-text {
     display: flex;
 }
@@ -342,11 +349,6 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 
 .card-text-image img {
     width: 100%;
-}
-
-.with-card-box:hover {
-    border: #9E2067, 0.2em solid;
-    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
 }
 
 .with-card-image {
@@ -364,7 +366,7 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     width: 210px;
     white-space: nowrap;
     text-overflow: ellipsis;
-
+    overflow: hidden;
     display: flex;
     align-items: center;
     font-weight: 600;
