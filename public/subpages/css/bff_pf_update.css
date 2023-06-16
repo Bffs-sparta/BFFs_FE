@@ -115,6 +115,7 @@ header > .profile > h3 {
   padding: .4em;
   border-radius: 6px;
   margin-top: 88px;
+
 }
 
 .card > .change {
@@ -344,8 +345,27 @@ header > .profile > h3 {
     box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
 }
 
+.submit-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
 
-
+.quit-button {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px 11px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background-color: #909090;
+    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+}
 
 
 
