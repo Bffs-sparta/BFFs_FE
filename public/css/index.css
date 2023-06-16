@@ -130,9 +130,32 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     width: 100%;
     height: 648px;
 
-
 }
 
+
+
+
+
+
+
+.visual {
+    background-image: url("/public/images/bc2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    height: 648px;
+
+
+}
 
 
 .visual > .inner > .text {
