@@ -21,6 +21,10 @@ img {
     display: block;
 }
 
+ul {
+  list-style-type: none;
+}
+
 header {
     background-image: url("/public/images/bc2.png");
     background-size: cover;
@@ -100,9 +104,7 @@ header > .profile > h3 {
 
 
 
-
-
-main {
+.container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -262,10 +264,48 @@ margin-bottom: 22px;
 
 
 
+.limit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.member-area {
+    width: 444px;
+    height: 48px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    overflow:scroll;
+    position: relative;
+}
 
+.member-menu {
+    height: 20px;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;  
+    overflow: auto;
+    position: sticky;
+}
 
+.member-content {
+    list-style-type: none;
+    float: left;
+    color : #909090; 
+    font-size: 0.9rem;
+    /* margin-block-start: 0.3em;
+    margin-block-end: 0.5em;    */
+}
+
+.member-content li {
+    float: left;
+    margin-right: 10px;
+    padding-left: 10px
+}
 
 
 
