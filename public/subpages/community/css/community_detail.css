@@ -148,18 +148,18 @@ margin-bottom: 22px;
     align-items: center;
 }
 
-.card > .button-group > img {
+a > .card  > .button-group > img {
     width: 20px;
     height: 15px;
 }
 
-.card > .button-group > .with-text-view-box {
+a > .card  > .button-group > .with-text-view-box {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card > .button-group > .with-text-view-box > img {
+a > .card >.button-group > .with-text-view-box > img {
     text-align: center;
     width: 20px;
     height: 15px;
