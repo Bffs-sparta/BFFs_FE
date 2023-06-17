@@ -124,11 +124,11 @@ button:hover {
 
 
 
-
 .bookmark {
-    margin: auto;
+    /* margin: auto; */
     margin-top: 40px;
-    height: 50%;
+    width: 50%;
+    /* height: 50%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -152,7 +152,6 @@ button:hover {
     flex-wrap: wrap;
 }
 
-
 .card {
   width: 472px;
   height: 424px;
@@ -160,13 +159,12 @@ button:hover {
   padding: .4em;
   border-radius: 6px;
   margin-left: -648px;
-  /* margin: auto; */
+  margin: auto;
 }
 
 .card > .change {
     margin-top: 24px;
     float: right;
-  margin-left: -248px;
 }
 
 .card-image {
@@ -223,7 +221,6 @@ button:hover {
 
 
 .mypage {
-
     width: 1200px;
     
     top: 0;
@@ -234,31 +231,18 @@ button:hover {
     display: grid;
     place-items: center;
     grid-template-rows: (1, 48px);
-    grid-template-columns: repeat(9, 680px);
+    grid-template-columns: repeat(2, 680px);
     grid-template-columns: repeat(8, 1fr);
     grid-auto-rows: auto;
-    width: 800px;
-    top: 0;
-    bottom: 0;
-    right: 80px;
-    margin-left: 88px;
-    display: grid;
-    place-items: center;
-    grid-template-rows: (1, 48px);
-    /* grid-template-columns: repeat(9, 680px); */
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 642px;
-
 }
 
 
-.new-card-box:nth-child(1) {
+/* .new-card-box:nth-child(1) {
     grid-column: 1 / 5;
-}
+} */
 
-.new-card-box:nth-child(2) {
-
-    grid-column: span 5;
+.user_profile:nth-child(1) {
+    grid-column: span 6;
 }
 
 
@@ -361,25 +345,6 @@ button:hover {
 
 
 
- .user-guestbook > .submit-box > .create-button {
-     /* margin-right: 100px; */
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 20px 28px 25px;
-    font-size: 8px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    background-color: #a92278;
-    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
-
-}
 
 .writer > .guestbook-comment {
     position: relative;
@@ -510,7 +475,6 @@ button:hover {
   }
 
 .quit-button {
-
     white-space: nowrap;
     text-overflow: ellipsis;
     outline: none;
@@ -532,11 +496,10 @@ button:hover {
 
 .new-card-wrapper {
     display: flex;
-    justify-content: flex-start;
-    overflow: scroll;
+    justify-content: flex-start; 
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 1500px;
+    min-width: 800px;
 }
 
 
@@ -557,6 +520,10 @@ button:hover {
     grid-template-columns: 120px 150px 30px;
     grid-template-rows: 40px auto;
 }
+
+/* .list {
+    width: 2000px;
+} */
 
 .new-card-box:hover {
     border: #9E2067, 0.2em solid;
@@ -679,19 +646,26 @@ button:hover {
 
 
 
-footer {
-    background-color: #dddddd;
+#wrap {
+    min-height: calc(100% - 4rem);
 }
 
-footer > .inner {
+footer {
+    background-color: #dddddd;
+    height: 4rem;
+    bottom: 0px;
+}
+
+footer > .wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
 }
 
-footer > .inner > img {
+footer > .wrap > img {
     width:42px;
     height: 42px;
 }
+
 

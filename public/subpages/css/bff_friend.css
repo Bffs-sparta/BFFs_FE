@@ -46,7 +46,6 @@ header > .inner {
 
 header > .inner > .left-sd {
     display: flex;
-
     align-items: center;
     height: 120px;
 }
@@ -55,13 +54,13 @@ header > .inner > .left-sd >  h1 {
     margin-right: 18px;
 }
 
-header > .inner > .left-sd > h3 > a::after {
+header > .inner > .left-sd > .line > h3 > a::before {
     content: "";
     display: block;
     float: left;
     margin-right: 6px;
-    width: 2px;
-    height: 18px;
+    width: 3px;
+    height: 28px;
     background-color: #9E2067;
 }
 
@@ -194,8 +193,8 @@ header > .profile > h3 {
     display: block;
     float: left;
     margin-right: 6px;
-    width: 2px;
-    height: 22px;
+    width: 3px;
+    height: 28px;
     background-color: #9E2067;
 }
 
