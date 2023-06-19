@@ -1,6 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+
+main {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 70px;
 }
 
 * {
@@ -468,4 +475,22 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     color: #808080;
     font-weight: 400;
     font-size: 0.9rem;
+}
+
+
+footer {
+    height: 70px;
+    background-color: #dddddd;
+    position: relative;
+    transform: translateY(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+
+footer  > img {
+    width:42px;
+    height: 42px;
 }
