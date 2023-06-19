@@ -315,11 +315,6 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
     font-size: 0.9rem;
 }
 
-.alone-card-subtext img {
-    width: 20px;
-    height: 15px;
-}
-
 .alone-text-view-box{
     display: flex;
     margin-top: 10px;
@@ -327,8 +322,10 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 }
 
 .alone-text-view-box img {
-    text-align: center;
-    width: 20px;
+    margin-top: 3px;
+    margin-right: 5px;
+    align-items: center;
+    width: 15px;
     height: 15px;
 }
 
@@ -468,7 +465,7 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 }
 
 .with-card-subtext img {
-    text-align: center;
+    margin-top: 3px;
     width: 20px;
     height: 15px;
 }
