@@ -4,6 +4,12 @@ body {
     height: 100vh;
 }
 
+main {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 70px;
+}
+
 * {
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -476,9 +482,10 @@ header > .inner > .sub-menu > .hamburger > .material-icons {
 
 
 footer {
+    height: 70px;
     background-color: #dddddd;
     position: relative;
-    transform: translateY(-100%);
+    transform: translateY(100%);
     display: flex;
     justify-content: center;
     align-items: center;
