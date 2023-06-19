@@ -824,3 +824,93 @@ body {
     box-shadow:#dddddd 0px -2px 0px inset;
 }
 
+
+/* 대댓글 입력 area */
+
+.coco-input-wrapper {
+    margin: 20px 20px;
+    display: grid;
+
+    grid-template-columns: 90px 75% 70px 70px;
+    grid-template-rows: 70px;
+    grid-gap: 10px;
+}
+
+.coco-text-info {
+    display: flex;
+    grid-column: 1 / 2;
+}
+
+.coco-text-info p {
+    margin: auto;
+    font-size: 0.9rem;
+    color: #707070;
+}
+
+.input-coco-text {
+    padding: 0.5rem 0.8rem;
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    width: 92%;
+
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input-coco-text:hover, .input-coco-text:focus, .input {
+    outline: none;
+    border-color: #9E2070;
+}
+
+.input-group:hover, .input:focus {
+    color: #9E2070;
+}
+
+
+/* 대댓글 입력 / 취소 button area */
+
+.coco-submit-button {
+    grid-column: 3 / 4;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: #a92278;
+    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+}
+
+.coco-submit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+.coco-quit-button {
+    grid-column: 4 / 5;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: #dddddd;
+    box-shadow: 0 2px 5px rgba(131, 131, 131, 0.5);
+}
+
+.coco-quit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
