@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 메타데이터 설정 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="BFFs, 찐친">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="1인 가구를 위한 찐친 만들기 프로젝트. 때론 같이 놀면서 즐거운 커뮤니티를 만들어가세요!">
+    <meta property="og:site_name" content="BFFs">
+    <meta property="og:locale" content="ko_KR">
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <title>BFFs ㆍ 커뮤니티 관리하기</title>
+    <link rel="stylesheet" href="css/community_manage.css">
+  </head>
+  <body>    
+    <header></header>
+    <main>
+      <section class="head-section">
+        <div class="head-area">
+        </div>
+      </section>
+      <section class="main-section">
+        <div class="main-area">
+          <div class="main-container">
+            <div class="main-title">
+              <h1>커뮤니티 관리하기</h1>
+            </div>
+          </div>            
+          <div class="main-container">
+            <div class="main-wrapper">
+              <div class="sub-title">
+                <span>
+                  <h3>커뮤니티 이름</h3>
+                  <p id="community_title">커뮤니티 이름 자리</p>
+                </span>
+              </div>
+              <div class="image-box">
+                <label class="custum-file-upload" for="file">
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+                  </div>
+                  <div class="text">
+                    <span>Click to upload image</span>
+                  </div>
+                  <input type="file" id="file">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="main-container">
+            <div class="sub-title2">
+              <span>
+                <h3>커뮤니티 소개</h3>
+                <div class="input-box">
+                  <textarea autocomplete="off" id="introduction" class="input-introduction" type="introduction"></textarea>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="main-container">
+            <div class="sub-title3">
+              <span>
+                <h3>금지어 설정</h3>
+                <div class="input-box">
+                  <textarea autocomplete="off" id="" class="input-introduction" type="introduction"></textarea>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="main-container">
+            <div class="sub-title2">
+              <span>
+                <h3>회원 관리하기</h3>
+                <div class="member-wrapper">
+                  <div class="search-area">
+                    <div class="admin-box">
+                      <p class="comuadmin-name"> 메인 관리자 :</p>
+                      <p class="comuadmin-name" id="comuadmin_name"> ~이름이지롱~</p>
+                    </div>
+                    <div class="search-box">
+                      <div class="container-input">
+                        <input type="text" placeholder="Search" name="text" class="input">
+                        <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                      </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="member-area">
+                    <div class="member-menu">
+                      <div class="member-content1">
+                        <span class="realname1">이름</span>
+                        <span class="nickname1">닉네임</span>
+                        <span class="feed1">최근 쓴 게시글</span>
+                        <span class="subadmin1">관리자 설정</span>
+                      </div>
+                    </div>
+                    <!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름셋</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <!-- subadmin 이면 상단에 배치 및 아이콘 띄워주기 -->
+                          <img id="checked" src="images/checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <img id="checked" src="images/none-checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div><!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <img id="checked" src="images/none-checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div><!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <img id="checked" src="images/none-checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div><!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <img id="checked" src="images/none-checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div><!-- 멤버 리스트 -->
+                    <div class="member-list">
+                      <ul class="member-content">
+                        <li id="realname">이름</li>
+                        <li id="nickname">닉네임</li>
+                        <li id="feed">~~~~~~최근 쓴 게시글~~~~~~</li>
+                        <li id="subadmin">
+                          <img id="checked" src="images/none-checked.png"> 
+                        </li>
+                        <li class="button-box">
+                          <button> 설정 </button>
+                          <button> 취소 </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="submit-box">
+          <button class="create-button">저장하기</button>
+          <button class="quit-button">취소하기</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

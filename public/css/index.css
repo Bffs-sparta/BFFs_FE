@@ -1,0 +1,496 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+main {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 70px;
+}
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #000
+}
+
+img {
+    display: block;
+}
+
+
+
+
+header > .inner{
+        position: relative;
+        width: 1100px;
+        height: 120px;
+        margin: 0 auto;
+
+
+}
+
+header > .inner > h1 > .logo {
+    height: 111px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+
+}
+
+
+
+header > .inner > .sub-menu {
+    position: absolute;
+    top: 10;
+    right: 0;
+    display: flex;
+}
+
+header > .inner > .sub-menu > nav > h2 {
+    visibility: hidden;
+}
+
+header > .inner > .sub-menu > nav > .menu {
+    list-style-type: none;
+    display: flex;
+    padding-right: 48px;
+    align-items: center;
+    height: 70px;
+    
+    
+
+}
+
+header > .inner > .sub-menu > nav > .menu > li{
+ position: relative;
+}
+
+header > .inner > .sub-menu > nav > .menu > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+header > .inner > .sub-menu > nav > .menu > li:first-child:before {
+    display: none;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a{
+    padding: 11px 12px;
+    color: #454545;
+}
+
+header > .inner > .sub-menu > nav > .menu > li > a:hover {
+    color: #9E2067;
+}
+
+header > .inner > .sub-menu > .hamburger {
+    position: relative;
+}
+
+header > .inner > .sub-menu > .hamburger > .material-icons {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+.visual {
+    background-image: url("/public/images/bc2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    height: 648px;
+
+}
+
+
+
+
+
+
+
+.visual {
+    background-image: url("/public/images/bc2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    height: 648px;
+
+
+}
+
+
+.visual > .inner > .text {
+    color: #fff;
+    text-align: center;
+}
+
+.main-area {
+    width: 1200;
+    height: auto;
+}
+
+.main-container {
+    margin: 20px 0px 20px 0px;
+    padding: 30px;
+    position: relative;
+}
+
+.main-title {
+    width: 100%;
+    vertical-align:middle;
+    height: 50px;
+    margin-bottom: 40px;
+}
+
+.main-box {
+    margin: 30px 40px 40px 30px;
+}
+
+.card-container {
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+/***** 혼자 - AI *****/
+
+.main-title h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;    
+    float: left;
+    color: #555555;
+    font-size: 22px;
+}
+
+.main-title h3::before {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 6px;
+    width: 3px;
+    height: 28px;
+    background-color: #9E2067;
+}
+
+.main-title a {
+    padding-left: 110px;
+    font-style: italic;
+    font-weight: bold;
+    color: #9E2067;
+    font-size: 25px;    
+}
+
+.main-ai-box {
+    align-items: center;
+    float: left;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.main-ai-image-box img {
+    clear: both;
+    padding-top: 10px;
+    width: 40px;
+    height: auto;
+}
+
+/***** 혼자 놀기 *****/
+
+.alone-card-box {
+    margin-right: 40px;
+    width: 260px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    cursor: pointer;
+}
+   
+.alone-card-box:hover {
+    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
+.card-image {
+    margin: 0 auto;
+    width: 260px;
+    height: 190px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    position: absolute;
+    width: 270px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*****Text*****/
+.card-text{
+    display: flex;
+    white-space: nowrap;  
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 240px;
+}
+
+.alone-text-title {
+    justify-self: center;
+    margin-top: 23px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #909090;
+}
+
+.card-subtext{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.alone-text-content {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.alone-text-view-box{
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.alone-text-view-box img {
+    margin-top: 3px;
+    margin-right: 5px;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+}
+
+.alone-text-view-content {
+    text-align: center;
+    margin-left: 70px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/***** 같이 놀기 card area *****/
+
+.with-card-container {
+    width: 1200;
+    margin-top: 20px;
+    /* 그리드로 카드 자리 지정 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+    grid-template-rows:repeat(auto-fill, minmax(300px, auto));  
+    row-gap: 10px;
+	column-gap: 20px;
+}
+
+.with-card-box {
+    width: 480px;
+    height: 270px;
+    margin-bottom: 20px;
+
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    cursor: pointer;
+}
+
+.with-card-box:hover {
+    border: #9E2067, 0.2em solid;
+    box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
+.with-card-text {
+    display: flex;
+}
+
+.card-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-text-image img {
+    width: 100%;
+}
+
+.with-card-image {
+    margin-left: 20px;
+    width: 260px;
+    height: 190px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.with-text-title {
+    margin-top: 10px;
+    padding-left: 30px;
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #707070;
+}
+
+.with-text-region {
+    margin-top: 10px;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    font-weight: 450;
+    font-size: 1.0rem;
+    color: #909090;
+}
+
+.with-card-subtext{
+    display: flex;
+    margin-top: 14px;
+    justify-content: center;
+    text-align: center;
+}
+
+.with-card-text-box {
+    padding-right: 20px;
+}
+
+.with-card-category {
+    margin-left: 45px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.with-card-category-box {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 450;
+    font-size: 1.0rem;
+    color: #909090;
+    cursor: pointer;
+}
+
+.with-text-content-box {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 120px; 
+}
+
+.with-text-view-box{
+    display: flex;
+    margin-top: 2px;
+}
+
+
+.with-text-content {
+    text-align: center;
+    margin-left: 10px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.with-card-subtext img {
+    margin-top: 3px;
+    width: 20px;
+    height: 15px;
+}
+
+.with-text-view-content {
+    text-align: center;
+    color: #808080;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+
+footer {
+    height: 70px;
+    background-color: #dddddd;
+    position: relative;
+    transform: translateY(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+
+footer  > img {
+    width:42px;
+    height: 42px;
+}

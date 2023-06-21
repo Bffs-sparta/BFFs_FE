@@ -1,0 +1,1176 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head-area {
+    margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px 50px;
+}
+
+.image-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.head_img {
+    min-height: 150px;
+    min-width: 500px;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.head-title {
+    margin-left: auto;
+    margin-right: 40px;
+    text-align: right;
+    color: white;
+    z-index: 1;
+    font-size: 26px;    
+    word-spacing:5px;
+    letter-spacing:5px;
+    
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/***** 버튼 css *****/
+
+.button-box {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+
+.main-area {
+    width: 1200;
+    height: auto;
+}
+
+.main-container {
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+
+/* 게시판 ~ search area */
+
+.search-category-area {
+    display: grid;
+    margin: 10px 40px;
+    justify-content: space-between;
+
+    grid-template-columns: 67% 33%;
+    background-color: #ffc549;
+}
+
+.head-category-wrapper {
+    display: flex;
+    justify-content: left;
+    height: 72px;
+    width: auto;
+    padding: 10px, 10px, 10px, 10px;
+}
+
+
+/***** search area *****/
+
+.search-box {
+    margin-top: 14px;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 2;
+}
+
+.container-input {
+    position: relative;
+}
+  
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 30px;
+    border-radius: 9999px;
+    border: solid 1px #707070;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+
+
+/* 북마크 button css */
+
+.bookmark {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    margin-left: auto;
+
+}
+  
+#checkboxInput {
+    display: none;
+}
+  
+.svgIcon {
+    height: 35px;
+}
+  
+.svgIcon path {
+    fill: rgb(255, 255, 255);
+}
+  
+.bookmark::before {
+    content: "\002B";
+    position: absolute;
+    color: #909090;
+    font-size: 1.2em;
+    bottom: 7px;
+}
+  
+#checkboxInput:checked + .bookmark::before {
+    content: "\2713";
+    font-size: 1.1em;
+    top: 1px;
+    color: #ffffff;
+}
+  
+#checkboxInput:checked + .bookmark .svgIcon path {
+    fill: rgb(253, 184, 9);
+    color: white;
+}
+  
+#checkboxInput:active + .bookmark .svgIcon path {
+    fill: rgb(255, 255, 255);
+}
+  
+.bookmark::after {
+    content: "";
+    background-color: rgba(255, 183, 0, 0.788);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: -1;
+}
+  
+#checkboxInput:checked + .bookmark::after {
+    animation: puff-out-center .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+    z-index: 1;
+}
+  
+@keyframes puff-out-center {
+    0% {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+    }   
+  
+    100% {
+      transform: scale(9);
+      filter: blur(1px);
+      opacity: 0;
+    }
+}
+
+/* 새 글 쓰기 button */
+
+.Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: #9e2070;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+  
+.Btn-svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+}
+  
+.Btn:hover {
+    color: transparent;
+}
+  
+.Btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+}
+  
+.Btn:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px #6a154b;
+}
+
+/* 글 쓴 당사자가 공구 종료시키기 버튼 buttun */
+.content-button-box {
+    margin-left: auto;
+}
+
+.ended-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 115px;
+    height: 30px;
+    border: none;
+    padding: 0px 15px;
+    background-color: #909090;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 7px;
+    transition-duration: .3s;
+}
+  
+.ended-button:hover {
+    background-color: #9E2070;
+}
+  
+.ended-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+
+/* main-content! 글 내용 area */
+
+.main-content-wrapper {
+    display: grid;
+    grid-template-columns: 100px 60% 25%;
+    grid-template-rows: 30px 30px auto 50px;
+}
+
+.content-button-box {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.content-view-box{
+    display: flex;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.content-view-box img {
+    text-align: center;
+    width: 23px;
+    height: 18px;
+}
+
+.text-view-content {
+    text-align: center;
+    margin-left: 4px;
+    color: #dddddd;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.content-info-box {
+    display: flex;
+    margin: 8px auto;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style-type: none;
+    color: #dddddd;
+
+    
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.content-info-box a {
+    margin-right: 8px;
+}
+
+.content-info-box li {
+    margin-right: 8px;
+}
+
+/* content 글자들 area */
+
+.content-status {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin: 2px auto;
+    color: #454545;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.main-title {
+    margin: 0 auto;
+    color: #454545;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.main-content {
+    margin: auto 50px;
+    padding: 20px 10px 50px 10px;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
+.main-content p {
+    color: #454545;
+    white-space: pre-wrap;
+}
+
+/* 공구 폼 purchase form area */
+
+.purchase-form-box {
+    display: inline-flex;
+    list-style-type: none;
+    width: 800px;
+    height: 500px auto;
+}
+
+.purchase-form {
+    display: grid;
+    grid-template-columns: 100px 20px 300px 100px 200px;
+    grid-template-rows: 60px 50px 30px 30px 40px 30px;
+    grid-gap: 3px;
+
+    padding: 40px 60px 60px 60px;
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7;
+    color: #454545;
+    box-shadow:#dddddd 0px -2px 0px inset;
+}
+
+.product-name-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;    
+}
+
+.product-number-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;    
+}
+
+.open-at-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;    
+}
+
+.close-at-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;    
+}
+
+.person-limit-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;    
+}
+
+.link-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;  
+}
+
+.location-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;  
+}
+
+.meeting-at-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;  
+}
+
+.end-option-part {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909090;
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;  
+}
+
+/***** 공구 폼 purchase form 상세 내용 *****/
+
+.product-name {
+    margin: auto 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.product-number {
+    margin: auto 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    grid-column: 2 / 4;
+    grid-row: 5 / 6;
+}
+
+.open-at {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+.close-at {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+}
+
+.link {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+}
+
+.person-limit {
+    margin: auto 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.location {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 5 / 6;
+    grid-row: 2 / 4;
+}
+
+.meeting-at {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;
+}
+
+.end-option {
+    margin: auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+}
+
+
+/* 공구 신청 버튼 button */
+
+.parti-button {
+    margin-left: auto;
+    margin-right: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 35px;
+    border: none;
+    padding: 0px 5px;
+    background-color: #9e2070;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 450;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+
+    grid-column:  -1 / -2;
+    grid-row: -1 / -2;
+}
+
+.parti-button:hover {
+    background-color: #c2006e;
+    color: white;
+}
+
+
+/***** 신청 폼 & 신청 버튼 *****/
+
+
+.purchase-submit-box {
+    display: inline-flex;
+    list-style-type: none;
+    width: 400px;
+    height: 300px auto;
+    margin: 50px 160px;
+
+    display: grid;
+    grid-template-columns: 160px 140px 80px;
+    grid-template-rows: 30px 50px;
+    grid-gap: 10px;
+    
+    padding: 30px 40px ;
+    height: auto;
+    background-color: #dddddd;
+    color: #454545;
+    box-shadow:#909090 0px -2px 0px inset;
+}
+
+.submit-part {
+    margin: auto;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.submit-help-text {
+    margin: auto;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color:#909090;
+    padding: 5px 10px;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.purchase-submit-input {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    padding: 0.5rem 0.8rem;
+    margin: auto;
+    width: 50px;
+    height: 30px;
+
+    background-color: white;
+    border-radius: .5rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid transparent;
+    font-size: 1.1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.purchase-submit-input:hover, .purchase-submit-input:focus, .input {
+    outline: none;
+    border-color: #9E2070;
+}
+
+.input-group:hover, .input:focus {
+    color: #9E2070;
+}
+
+.submit-button {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    border: none;
+    background-color: #9e2070;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 450;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+
+    grid-column:  3 / 4;
+    grid-row: 1 / 3;
+}
+
+.submit-button:hover {
+    background-color: #c2006e;
+    color: white;
+}
+  
+.submit-button:active {
+    transform: translate(0, 3px);
+}
+
+/* 목록 ~ 버튼 area */
+.function-box {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+}
+
+/* 목록 버튼 */
+.move-box {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.move-button {
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 30px;
+    border: none;
+    padding: 0px 5px;
+    background-color: #dddddd;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.move-button:hover {
+    background-color: #909090;
+    color: white;
+}
+  
+.move-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+/* 버튼 박스 */
+
+.content-button-box {
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+    align-items: center;
+}
+
+/* 글 수정 삭제 버튼 */
+.content-edit-button {
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 30px;
+    border: none;
+    padding: 0px 5px;
+    background-color: #dddddd;
+    color: #909090;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.content-edit-button:hover {
+    background-color:  rgb(34, 64, 115);
+    color: white;
+}
+  
+.content-edit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+.content-delete-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 30px;
+    border: none;
+    padding: 0px 5px;
+    background-color: #dddddd;
+    color: #909090;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+    
+.content-delete-button:hover {
+    background-color: #a40303;
+    color: white;
+}
+    
+.content-delete-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+
+/* sub-content! 댓글 input area */
+
+.sub-input-wrapper {
+    margin: 0px 0px 50px 0px;
+    display: grid;
+
+    grid-template-columns: 90px 80% 90px;
+    grid-template-rows: 90px;
+}
+
+.sub-text-info {
+    display: flex;
+    grid-column: 1 / 2;
+}
+.sub-text-info p {
+    margin-right: 3px;
+    padding-top: 20px;
+}
+
+.input-sub-text {
+    padding: 0.5rem 0.8rem;
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    width: 92%;
+
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input-sub-text:hover, .input-sub-text:focus, .input {
+    outline: none;
+    border-color: #9E2070;
+}
+
+.input-group:hover, .input:focus {
+    color: #9E2070;
+}
+
+
+/* 입력 button area */
+
+.input-button {
+    grid-column: 3 / 4;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: #a92278;
+    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+}
+
+.input-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+
+/* 댓글 내용 area */
+
+.sub-content-wrapper {
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 100%)
+}
+
+
+.comment-box {
+    display: block;
+    list-style-type: none;
+    width: auto;
+    height: 80px auto;
+}
+
+.comment-card {
+    display: grid;
+    grid-template-columns: 120px auto 200px;
+    grid-template-rows: 30px auto;
+    grid-gap: 4px;
+
+    padding: 10px 20px ;
+    width: auto;
+    height: auto;
+    background-color: #f7f7f7;
+    color: #454545;
+    box-shadow:#dddddd 0px -2px 0px inset;
+}
+
+.comment-author {
+    margin: auto 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.comment-date {
+    margin-left: auto;
+    margin-top: 5px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.comment-text {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.comment-func-box {
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* comment 수정 버튼 */
+
+.comment-edit-btn {
+    background-color: transparent;
+    position: relative;
+    border: none;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: 5px;
+}
+  
+.comment-edit-btn::after {
+    content: '수정';
+    white-space: nowrap;
+    margin-top: 10px;
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(34, 64, 115);
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: .2s linear;
+    transition-delay: .2s;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.edit-icon {
+    transform: scale(1.1);
+    transition: .2s linear;
+}
+  
+.comment-edit-btn:hover > .edit-icon {
+    transform: scale(1.3);
+}
+  
+.comment-edit-btn:hover > .edit-icon path {
+    fill: rgb(34, 64, 115);
+}
+  
+.comment-edit-btn:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: -160%;
+}
+
+/* comment 삭제 버튼 */
+
+.comment-delete-btn {
+    background-color: transparent;
+    position: relative;
+    border: none;
+    margin-top: auto;
+
+}
+  
+.comment-delete-btn::after {
+    content: '삭제';
+    white-space: nowrap;
+    margin-top: 10px;
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(168, 7, 7);
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: .2s linear;
+    transition-delay: .2s;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.delete-icon {
+    transform: scale(1.1);
+    transition: .2s linear;
+}
+  
+.comment-delete-btn:hover > .delete-icon {
+    transform: scale(1.3);
+}
+  
+.comment-delete-btn:hover > .delete-icon path {
+    fill: rgb(168, 7, 7);
+}
+  
+.comment-delete-btn:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: -160%;
+}
+  
+/* 대댓글 작성 버튼 */
+
+.cocomment-button {
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 25px;
+    border: none;
+    background-color: #dddddd;
+    color: #909090;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .3s;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.cocomment-button:hover {
+    background-color:  rgb(34, 64, 115);
+    color: white
+}
+  
+.cocomment-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+/* 코코멘트 대댓글 area */
+
+.cocommnet-box {
+    width: 100%;
+    display: flex;
+}
+
+.cocomment-deco {
+    color: #9e2070;
+    font-size: 40px;
+    font-weight: 900;
+    padding-left: 10px;
+    margin: auto;
+}
+
+.cocomment-card {
+    display: grid;
+    grid-template-columns: 120px auto 160px;
+    grid-template-rows: 30px auto;
+    grid-gap: 4px;
+
+    margin-left:20px;
+    padding: 10px 20px ;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+    color: #454545;
+    box-shadow:#dddddd 0px -2px 0px inset;
+}
+
+
+/* 대댓글 입력 area */
+
+.coco-input-wrapper {
+    margin: 20px 20px;
+    display: grid;
+
+    grid-template-columns: 90px 75% 70px 70px;
+    grid-template-rows: 70px;
+    grid-gap: 10px;
+}
+
+.coco-text-info {
+    display: flex;
+    grid-column: 1 / 2;
+}
+
+.coco-text-info p {
+    margin: auto;
+    font-size: 0.9rem;
+    color: #707070;
+}
+
+.input-coco-text {
+    padding: 0.5rem 0.8rem;
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    width: 92%;
+
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input-coco-text:hover, .input-coco-text:focus, .input {
+    outline: none;
+    border-color: #9E2070;
+}
+
+.input-group:hover, .input:focus {
+    color: #9E2070;
+}
+
+
+/* 대댓글 입력 / 취소 button area */
+
+.coco-submit-button {
+    grid-column: 3 / 4;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: #a92278;
+    box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+}
+
+.coco-submit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
+
+.coco-quit-button {
+    grid-column: 4 / 5;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: #dddddd;
+    box-shadow: 0 2px 5px rgba(131, 131, 131, 0.5);
+}
+
+.coco-quit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
+}
