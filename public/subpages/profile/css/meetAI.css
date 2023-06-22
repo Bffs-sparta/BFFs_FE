@@ -162,17 +162,6 @@ body {
   border-radius: 10px;
 }
 
-.message-box.left {
-  background-color: #f372a3;
-  width: auto;
-  margin-right: auto;
-}
-
-.left-text {
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-}
-
 .message-box.right {
   background-color: #454545;
   margin-left: auto;
@@ -182,6 +171,74 @@ body {
     color: #fff;
     font-size: 16px;
 }
+
+.message-box.left {
+    background-color: #f372a3;
+    width: auto;
+    margin-right: auto;
+}
+
+.left-text {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+  
+  
+  
+/* loader 로딩  */
+
+/* js쪽에서 이걸로 Hide 옵션을 줄 수 있습니다! */
+/* <script>
+    $(window).load(function() {
+     $('.loader').addClass('hide');
+    });
+</script>  */
+.hide {
+  display: none;
+}
+
+.loader {
+/* background-color: blue; */
+  padding : 10px 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+.loader-text {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 3px;
+  align-self: center;
+}
+
+.loader-bar {
+  margin-left: 45px;
+  width: 32%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #fff8ef;
+  animation: loader-bar-animation 2s ease-in-out infinite;
+}
+
+@keyframes loader-bar-animation {
+0% {
+    /* transform: translateX(-100%) rotate(270deg); */
+    transform: translateX(-100%);
+}
+
+50% {
+    /* transform: translateX(100%) rotate(-90deg); */
+    transform: translateX(100%);
+}
+
+100% {
+    /* transform: translateX(-100%) rotate(270deg); */
+    transform: translateX(-100%);
+}
+}
+  
 
 
 
