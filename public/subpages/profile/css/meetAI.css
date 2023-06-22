@@ -6,15 +6,29 @@ body {
 .head-area {
     width: 100%;
     height: 250px;
+    margin: auto;
     position: relative;
-    background: rgb(116, 35, 61);
+    background: #000000;
+        
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
-.head-area p {
-    margin-top: 190px;
+.head-title {
+    margin-top: 200px;
     margin-left: 5%;
-    font-size: 25px;    
-    color: white;
+    font-size: 30px;    
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1;
+}
+
+.head_img {
+    opacity: 1;
+    position: absolute;
+    min-height: 250px;
+    width: 100%;
 }
 
 .head-title {
@@ -29,7 +43,7 @@ body {
 
 .main-container {
     margin: 20px 0px 70px 0px;
-    padding: 30px;
+    padding: 50px;
 }
 
 /* ai 이미지 area */
@@ -41,10 +55,11 @@ body {
 }
 
 .main-title img {
-    width: 180px;
+    width: 150px;
 
     grid-row: 1/2;
-    margin: 0 auto;
+    margin:  auto;
+    padding-bottom: 10px;
 }
 
 .main-title h2 {
@@ -57,14 +72,14 @@ body {
 
 /* 뒤로 버튼 */
 
-button {
-    margin: 20px 40px;
+.back-button {
+    margin: 30px 50px;
     display: flex;
     height: 3em;
     width: 100px;
     align-items: center;
     justify-content: center;
-    background-color: #454545;
+    background-color: #dddddd;
     border-radius: 3px;
     letter-spacing: 1px;
     transition: all 0.2s linear;
@@ -73,13 +88,13 @@ button {
     background: #909090;
 }
 
-button span {
+.back-button span {
     font-size: 14px;
     font-weight: 600;
     color: white;
 }
 
-button svg {
+.back-button svg {
     margin-right: 5px;
     margin-left: 5px;
     font-size: 20px;
@@ -87,90 +102,159 @@ button svg {
     fill: white;
 }
 
-button:hover svg {
+.back-button:hover svg {
     font-size: 1.2em;
     transform: translateX(-5px);
     fill: white;
 }
-   
-button:hover {
-    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
-    transform: translateY(-2px);
+
+.back-button:hover {
+    background-color: #707070;
+}
+
+.back-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
 }
 
 
 /* 대화창 area */
 
 .ai-content {
-    width: 75%;
+    width: 70%;
     height: 500px;
     justify-content: center;
-    background-color: antiquewhite;
     margin: 30px auto;
 }
 
-/* 입력창 area */
 
-.input-content-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 3% 15%;
+.card-container {
+  width: auto;
+  height: 490px;
+  background-color: #fff8ef;
+  border-radius: 10px ;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px 10px 20px 4px rgba(255, 166, 0, 0.1);
+
+  overflow: auto;
 }
 
-.input-content-box {
-    display: flex;
-
-    width: 100%;
-    height: 75px;
-    margin: 0 0 auto;
-    position: relative;
+.card-body {
+  margin-top: auto;
 }
 
-.input-content {
-    position: absolute;
-    width: 93%;
-    height: 100%;
-    margin: 0 auto;
+.messages-container.left {
+  display: flex;
+  padding: 10px 5px;
+  margin-right: 5%;
+}
+
+.messages-container.right {
+  display: flex;
+  padding: 10px 5px;
+  margin-left: 5%;
+}
+
+.message-box {
+  padding: 1px 15px;
+  border-radius: 10px;
+}
+
+.message-box.left {
+  background-color: #f372a3;
+  width: auto;
+  margin-right: auto;
+}
+
+.left-text {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.message-box.right {
+  background-color: #454545;
+  margin-left: auto;
+}
+
+.right-text {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+/* 대댓글 입력 area */
+
+.input-wrapper {
+    margin: 50px 18%;
+    display: grid;
+
+    grid-template-columns: auto 80px;
+    grid-template-rows: 55px 100px;
+    grid-gap: 12px;
+}
+
+.input-text-info {
+    display: flex;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2 ;
+}
+
+.input-text-info p {
+    margin-right: auto;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: #909090;
+}
+
+.input-text {
+    padding: 0.5rem 0.8rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+    width: auto;
+    resize: none; 
+
     background-color: #05060f0a;
     border-radius: .5rem;
-    padding: 1rem 1.2rem;
+    padding: 0.5rem 0.8rem;
     border: 2px solid transparent;
     font-size: 1rem;
     transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
 }
 
-.input-content:hover, .input:focus, .input-group:hover .input {
+.input-text:hover, .input-text:focus, .input {
     outline: none;
-    border-color: #9E2070;
+    border-color: #909090;
 }
 
-.input-group:hover .label, .input:focus {
-    color: #9E2070;
+.input-group:hover, .input:focus {
+    color: rgb(255, 233, 205);
 }
 
 
-/* 입력 button area */
+/* 대댓글 입력 / 취소 button area */
 
-.input-button {
+.submit-button {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100px;
     outline: none;
     border: none;
     cursor: pointer;
-    width: 50px;
-    padding: 45px 20px 40px 30px;
-    margin-left: 20px;
-    margin-right: auto;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     color: hsl(0, 0%, 100%);
     border-radius: 5px;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     position: relative;
-    background-color: #a92278;
+    background-color: #454545;
     box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
 }
 
-.create-button::after,
-.create-button::before {
-    transition: all 0.5s ease-in-out;
+.submit-button:active {
+    transform: translate(0, 3px);
+    transition-duration: .3s;
 }
