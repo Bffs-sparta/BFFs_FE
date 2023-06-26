@@ -30,8 +30,9 @@ body {
 /***** Title area *****/
 
 .main-title {
-    width:100%;
-    vertical-align:middle;
+    display: grid;
+    grid-template-columns: 80% 150px;
+    align-items: center;
 }
 
 .main-title h1 {
@@ -41,6 +42,7 @@ body {
     font-weight: 450;
     font-size: 2.0rem;
     color: #909090;
+    white-space: nowrap
 }
 
 /***** Content area *****/
@@ -398,4 +400,99 @@ body {
     color: hsl(0, 0%, 100%);
     background-color: #909090;
     box-shadow: 0 2px 5px rgba(70, 70, 70, 0.5);
+}
+
+
+/* 방문 button */
+
+.visit-button-box {
+    display: block;
+    justify-content: center;
+}
+
+.visit-button {
+    background-color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+}
+  
+.visit-button:hover {
+    width: 180px;
+    transition-delay: .2s;
+    background-color:#9E2067
+}
+  
+.visit-button:hover > .paragraph {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+}
+  
+.visit-button:hover > .icon-wrapper .icon {
+    transform: scale(1.0);
+    transform: rotate(180deg);
+    fill: white;
+
+}
+  
+.visit-button:hover > .icon-wrapper .icon path {
+    stroke: rgb(255, 255, 255);
+}
+  
+.paragraph {
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 18px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+  
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.icon {
+    transform: scale(1.0);
+    transition: .2s linear;
+    transform: rotate(180deg);
+    fill: #9E2067;
+
+}
+  
+.icon path {
+    stroke: #000;
+    stroke-width: 2px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
 }
